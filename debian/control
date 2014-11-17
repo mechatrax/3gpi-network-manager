@@ -1,0 +1,12 @@
+Source: 3gpi-network-manager
+Section: unknown
+Priority: optional
+Maintainer: Masahiro Honda <honda@mechatrax.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: http://www.mechatrax.com/
+
+Package: 3gpi-network-manager
+Architecture: all
+Depends: ${misc:Depends}, systemd, network-manager (>= 0.9.10), modemmanager (>= 1.2.0), 3gpi-utils
+Description: NetworkManager settings for 3GPI
