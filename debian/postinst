@@ -20,12 +20,11 @@ set -e
 
 case "$1" in
     configure)
-    systemctl restart NetworkManager
-    if [ ! -e /etc/NetworkManager/gsm-3gpi-asahinet ]
+    if [ ! "$(nmcli con | grep gsm-3gpi-asahinet)" ]
     then
         nmcli con add type gsm ifname "*" con-name gsm-3gpi-asahinet apn 3g.mobac.net user f@y.asahinet.jp password 0000
     fi
-    if [ ! -e /etc/NetworkManager/gsm-3gpi-dti ]
+    if [ ! "$(nmcli con | grep gsm-3gpi-dti)" ] 
     then
         nmcli con add type gsm ifname "*" con-name gsm-3gpi-dti apn dream.jp user user@dream.jp password dti
     fi
