@@ -1,0 +1,11 @@
+ACTION!="add|change|move", GOTO="3gpi_mm_blacklist_end"
+ATTRS{idVendor}=="05c6", ATTRS{idProduct}=="9000", GOTO="3gpi_mm_blacklist_go"
+GOTO="3gpi_mm_blacklist_end"
+
+LABEL="3gpi_mm_blacklist_go"
+
+KERNEL=="cdc-wdm**", SUBSYSTEM=="usb|usbmisc", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_CANDIDATE}="0"
+KERNEL=="wwan*", SUBSYSTEM=="net", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_CANDIDATE}="0"
+
+LABEL="3gpi_mm_blacklist_end"
+
