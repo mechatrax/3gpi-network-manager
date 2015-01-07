@@ -23,10 +23,15 @@ case "$1" in
     purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
     if [ $1 = "purge" ]
     then
-        nmcli con delete gsm-3gpi-asahinet
-        nmcli con delete gsm-3gpi-dti
+        if [ "$(nmcli con | grep gsm-3gpi-asahinet)" ]
+        then
+            nmcli con del gsm-3gpi-asahinet
+        fi
+        if [ "$(nmcli con | grep gsm-3gpi-dti)" ]
+        then
+            nmcli con del gsm-3gpi-dti
+        fi
     fi
-    systemctl restart NetworkManager
     ;;
 
     *)
