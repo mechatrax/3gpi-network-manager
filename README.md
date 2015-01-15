@@ -7,7 +7,10 @@
 以下のファイルがパッケージに含まれています。
 
 * /usr/share/doc/3gpi-network-manager/changelog.Debian.gz  
-  パッケージの変更履歴が記録されているファイルです。  
+  パッケージの変更履歴を記録したファイルです。  
+
+* /usr/share/doc/3gpi-network-manager/copyright  
+  ソースの著作権とライセンスを記載したファイルです。  
 
 * /lib/udev/rules.d/81-3gpi-mm-blacklist.rules  
   3GPIのモデムとして認識させないデバイスを定義した設定ファイルです。  
