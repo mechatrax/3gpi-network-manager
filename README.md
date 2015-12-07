@@ -21,15 +21,15 @@
 ## 作成ファイル  
 以下のファイルが存在しない場合、インストール時に作成されます。  
 
-* /etc/NetworkManager/system-connections/gsm-3gpi-asahinet  
+* /etc/NetworkManager/system-connections/gsm-3gpi-soracom
   次のコマンドによって作成されます。  
   ```
-  nmcli con add type gsm ifname “*” con-name gsm-3gpi-asahinet apn 3g.mobac.net user f@y.asahinet.jp password 0000  
+  nmcli con add type gsm ifname "*" con-name gsm-3gpi-soracom apn soracom.io user sora password sora
   ```
 
-* /etc/NetworkManager/system-connections/gsm-3gpi-dti  
+* /etc/NetworkManager/system-connections/gsm-3gpi-iij  
   次のコマンドによって作成されます。  
   ```
-  nmcli con add type gsm ifname “*” con-name gsm-3gpi-dti apn dream.jp user user@dream.jp password dti  
+  nmcli con add type gsm ifname "*" con-name gsm-3gpi-iij apn iijmio.jp user mio@iij password iij
   ```
 
