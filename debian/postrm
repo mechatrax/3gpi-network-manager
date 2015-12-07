@@ -23,13 +23,9 @@ case "$1" in
     purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
     if [ $1 = "purge" ]
     then
-        if [ "$(nmcli con | grep gsm-3gpi-asahinet)" ]
+        if [ "$(nmcli con | grep gsm-3gpi-soracom)" ]
         then
-            nmcli con del gsm-3gpi-asahinet
-        fi
-        if [ "$(nmcli con | grep gsm-3gpi-dti)" ]
-        then
-            nmcli con del gsm-3gpi-dti
+            nmcli con del gsm-3gpi-soracom
         fi
     fi
     ;;

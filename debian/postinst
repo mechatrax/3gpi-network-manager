@@ -20,13 +20,16 @@ set -e
 
 case "$1" in
     configure)
-    if [ ! "$(nmcli con | grep gsm-3gpi-asahinet)" ]
+    apns=$(nmcli -t -f NAME con | while read con; do nmcli -t -f gsm.apn con show "$con"; done)
+    for apn in $apns; do [ "$apn" = "gsm.apn:soracom.io" ] && break; done
+    if [ $? -ne 0 ] || [ "$apns" = "" ]
     then
-        nmcli con add type gsm ifname "*" con-name gsm-3gpi-asahinet apn 3g.mobac.net user f@y.asahinet.jp password 0000
+        nmcli con add type gsm ifname "*" con-name gsm-3gpi-soracom apn soracom.io user sora password sora
     fi
-    if [ ! "$(nmcli con | grep gsm-3gpi-dti)" ] 
+    for apn in $apns; do [ "$apn" = "gsm.apn:iijmio.jp" ] && break; done
+    if [ $? -ne 0 ] || [ "$apns" = "" ]
     then
-        nmcli con add type gsm ifname "*" con-name gsm-3gpi-dti apn dream.jp user user@dream.jp password dti
+        nmcli con add type gsm ifname "*" con-name gsm-3gpi-iij apn iijmio.jp user mio@iij password iij
     fi
     ;;
 
