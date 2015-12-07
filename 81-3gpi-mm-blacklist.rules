@@ -4,7 +4,7 @@ GOTO="3gpi_mm_blacklist_end"
 
 LABEL="3gpi_mm_blacklist_go"
 
-KERNEL=="cdc-wdm**", SUBSYSTEM=="usb|usbmisc", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_CANDIDATE}="0"
+KERNEL=="cdc-wdm*", SUBSYSTEM=="usb|usbmisc", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_CANDIDATE}="0"
 KERNEL=="wwan*", SUBSYSTEM=="net", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_CANDIDATE}="0"
 
 LABEL="3gpi_mm_blacklist_end"

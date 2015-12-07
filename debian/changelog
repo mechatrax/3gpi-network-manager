@@ -1,3 +1,15 @@
+3gpi-network-manager (0.2-1) unstable; urgency=low
+
+  * Add support for soracom
+  * Add support for iij
+  * Remove support for asahinet
+  * Remove support for dti
+  * Modify udev rule
+  * Fix copyright description
+  * Fix package maintainer scripts
+
+ -- Masahiro Honda <honda@mechatrax.com>  Mon, 30 Nov 2015 07:15:51 +0000
+
 3gpi-network-manager (0.1-3) unstable; urgency=low
 
   * Fix package maintainer scripts
