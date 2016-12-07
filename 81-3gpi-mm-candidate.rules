@@ -1,22 +1,26 @@
-# 3GPI SIM5320 mm_candidate port
-
 ACTION!="add|change|move", GOTO="3gpi_mm_candidate_end"
-SUBSYSTEM=="tty", ATTRS{idVendor}=="05c6", ATTRS{idProduct}=="9000", GOTO="3gpi_mm_candidate_go"
+ATTRS{idVendor}=="05c6", ATTRS{idProduct}=="9000", GOTO="3gpi_mm_candidate_go"
 GOTO="3gpi_mm_candidate_end"
 
 LABEL="3gpi_mm_candidate_go"
 
+# WDM port
+KERNEL=="cdc-wdm*", SUBSYSTEM=="usb|usbmisc", ENV{ID_MM_CANDIDATE}="0"
+
+# WWAN port
+KERNEL=="wwan*", SUBSYSTEM=="net", ENV{ID_MM_CANDIDATE}="0"
+
 # DIAG port
-KERNEL=="ttyUSB*", ENV{ID_USB_INTERFACE_NUM}=="00", ENV{ID_MM_CANDIDATE}="1"
+KERNEL=="ttyUSB*", SUBSYSTEM=="tty", ENV{ID_USB_INTERFACE_NUM}=="00", ENV{ID_MM_CANDIDATE}="0"
 
 # NMEA port
-KERNEL=="ttyUSB*", ENV{ID_USB_INTERFACE_NUM}=="01", ENV{ID_MM_CANDIDATE}="0"
+KERNEL=="ttyUSB*", SUBSYSTEM=="tty", ENV{ID_USB_INTERFACE_NUM}=="01", ENV{ID_MM_CANDIDATE}="0"
 
 # AT command port
-KERNEL=="ttyUSB*", ENV{ID_USB_INTERFACE_NUM}=="02", ENV{ID_MM_CANDIDATE}="0"
+KERNEL=="ttyUSB*", SUBSYSTEM=="tty", ENV{ID_USB_INTERFACE_NUM}=="02", ENV{ID_MM_CANDIDATE}="0"
 
 # MODEM port
-KERNEL=="ttyUSB*", ENV{ID_USB_INTERFACE_NUM}=="03", ENV{ID_MM_CANDIDATE}="1"
+KERNEL=="ttyUSB*", SUBSYSTEM=="tty", ENV{ID_USB_INTERFACE_NUM}=="03", ENV{ID_MM_CANDIDATE}="1"
 
 LABEL="3gpi_mm_candidate_end"
 

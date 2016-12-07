@@ -1,3 +1,12 @@
+3gpi-network-manager (1.0.0) unstable; urgency=medium
+
+  * Change to Native Debian Package
+  * Remove 81-3gpi-mm-blacklist.rules
+  * Change 81-3gpi-mm-candidate.rules
+  * Update copyright description
+
+ -- Masahiro Honda <honda@mechatrax.com>  Tue, 06 Dec 2016 19:17:57 +0900
+
 3gpi-network-manager (0.2-1) unstable; urgency=low
 
   * Add support for soracom
