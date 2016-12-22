@@ -4,10 +4,7 @@ Source: https://github.com/MechaTracks/3gpi-network-manager
 
 Files: *
 Copyright: 2014 Masahiro Honda <honda@mechatrax.com>
-License: MIT
-
-Files: debian/*
-Copyright: 2014 Masahiro Honda <honda@mechatrax.com>
+           2016 MechaTracks Co., Ltd. <info@mechatrax.com>
 License: MIT
 
 License: MIT
