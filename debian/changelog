@@ -1,3 +1,10 @@
+3gpi-network-manager (1.0.1) unstable; urgency=low
+
+  * Fix url typo
+  * Fix package format type
+
+ -- Masahiro Honda <honda@mechatrax.com>  Tue, 22 Aug 2017 15:46:46 +0900
+
 3gpi-network-manager (1.0.0) unstable; urgency=medium
 
   * Change to Native Debian Package

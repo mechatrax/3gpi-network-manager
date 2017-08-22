@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: 3gpi-network-manager
-Source: https://github.com/MechaTracks/3gpi-network-manager
+Source: https://github.com/mechatrax/3gpi-network-manager
 
 Files: *
 Copyright: 2014 Masahiro Honda <honda@mechatrax.com>
