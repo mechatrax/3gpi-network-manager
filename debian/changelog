@@ -1,6 +1,19 @@
+3gpi-network-manager (1.1.0) unstable; urgency=low
+
+  * debian/changelog: Fix typo and missing
+  * debian/control: Change Homepage URL
+  * debian/copyright: Change Format URL
+  * Change package priority from extra to optional
+  * Remove 99-3gpi-cleanup
+  * Remove default APN settings
+  * Update package dependencies
+  * Update Standards-Version to 3.9.8
+
+ -- Masahiro Honda <honda@mechatrax.com>  Tue, 12 Sep 2017 19:36:06 +0900
+
 3gpi-network-manager (1.0.1) unstable; urgency=low
 
-  * Fix url typo
+  * Fix URL typo
   * Fix package format type
 
  -- Masahiro Honda <honda@mechatrax.com>  Tue, 22 Aug 2017 15:46:46 +0900
@@ -8,6 +21,7 @@
 3gpi-network-manager (1.0.0) unstable; urgency=medium
 
   * Change to Native Debian Package
+  * Add 99-3gpi-cleanup
   * Remove 81-3gpi-mm-blacklist.rules
   * Change 81-3gpi-mm-candidate.rules
   * Update copyright description
