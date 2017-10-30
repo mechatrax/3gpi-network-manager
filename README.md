@@ -15,3 +15,5 @@
 * /lib/udev/rules.d/81-3gpi-mm-candidate.rules  
   3GPi のモデムとして認識させるデバイスを定義した設定ファイルです。  
 
+* /etc/systemd/system/NetworkManager.service.d/00-3gpi-killmode.conf  
+  NetworkManager.service の設定を変更するためのファイルです。  

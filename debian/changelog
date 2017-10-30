@@ -1,3 +1,9 @@
+3gpi-network-manager (1.1.1) unstable; urgency=medium
+
+  * Add 00-3gpi-killmode.conf
+
+ -- Masahiro Honda <honda@mechatrax.com>  Mon, 30 Oct 2017 14:58:00 +0900
+
 3gpi-network-manager (1.1.0) unstable; urgency=low
 
   * debian/changelog: Fix typo and missing
