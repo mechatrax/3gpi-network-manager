@@ -1,2 +1,2 @@
 ./81-3gpi-mm-candidate.rules /lib/udev/rules.d/
-./99-3gpi-cleanup /etc/NetworkManager/dispatcher.d/
+./00-3gpi-killmode.conf /etc/systemd/system/NetworkManager.service.d/
