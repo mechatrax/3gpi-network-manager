@@ -1,4 +1,11 @@
-3gpi-network-manager (1.1.1) unstable; urgency=medium
+3gpi-network-manager (1.2.1) unstable; urgency=medium
+
+  * Fix debian/changelog
+  * Update package maintainer scripts
+
+ -- Masahiro Honda <honda@mechatrax.com>  Tue, 31 Oct 2017 15:17:13 +0900
+
+3gpi-network-manager (1.2.0) unstable; urgency=medium
 
   * Add 00-3gpi-killmode.conf
 
