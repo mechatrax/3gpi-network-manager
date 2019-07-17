@@ -2,8 +2,8 @@ Source: 3gpi-network-manager
 Section: net
 Priority: optional
 Maintainer: Masahiro Honda <honda@mechatrax.com>
-Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 12)
+Standards-Version: 4.3.0
 Vcs-Git: https://github.com/mechatrax/3gpi-network-manager.git
 Vcs-browser: https://github.com/mechatrax/3gpi-network-manager
 Homepage: https://www.mechatrax.com/
@@ -15,4 +15,3 @@ Depends: ${misc:Depends}, systemd, network-manager (>= 1.6.2), modemmanager (>= 
 Description: NetworkManager settings for 3GPi
  This package contains udev rules and APN settings for using 3GPi with
  NetworkManager.
- 

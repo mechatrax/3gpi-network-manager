@@ -1,3 +1,10 @@
+3gpi-network-manager (1.2.2) buster; urgency=medium
+
+  * Update debhelper compatibility level to 12
+  * Bump Standards-Version to 4.3.0
+
+ -- Masahiro Honda <honda@mechatrax.com>  Mon, 08 Jul 2019 16:09:48 +0900
+
 3gpi-network-manager (1.2.1) unstable; urgency=medium
 
   * Fix debian/changelog
